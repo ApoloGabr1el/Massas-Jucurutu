@@ -1,0 +1,23 @@
+.apresentaçao{
+    position: relative;
+    height: 400px;
+    background-color: rgb(230, 20, 20);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.apresentaçao::after{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 250px;
+    left: -10%;
+    bottom: -150px;
+    background-color: white;
+    border-radius: 50% 50% 0 0;
+    border-top: 10px solid gold ;
+}
+.apresentaçao__logo{
+    margin-bottom: 100px;
+}
