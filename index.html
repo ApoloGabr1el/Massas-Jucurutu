@@ -15,14 +15,18 @@
   <body>
     <header>
       <div id="navbar"></div>
-      <section class="apresentaçao">
-        <img
-          class="apresentaçao__logo"
-          src="/assets/Massas-Jucurutu-logo.png"
-          alt="Logo Massas Jucurutu"
-        />
-      </section>
+      <div id="apresentaçao"></div>
     </header>
+
+    <main class="main">
+      <section class="historia">
+
+      </section>
+
+      <section class="produtos">
+        
+      </section>
+    </main>
 
     <script>
       fetch("components/navbar.html")
@@ -30,6 +34,9 @@
         .then((html) => {
           document.querySelector("#navbar").innerHTML = html;
         });
+      fetch("components/apresentaçao.html").then((resposta) => resposta.text()).then((html) => {
+        document.querySelector("#apresentaçao").innerHTML = html;
+      });
     </script>
   </body>
 </html>

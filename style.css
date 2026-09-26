@@ -1,6 +1,13 @@
 @import url(/components/Navbar.css);
 @import url(/components/Apresentaçao.css);
+@import url(/components/main.css);
 
-body{
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar{
+    display: none;
 }

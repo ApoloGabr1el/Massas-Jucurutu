@@ -15,6 +15,7 @@
   <body>
     <header>
       <div id="navbar"></div>
+      <div id="apresentaçao"></div>
     </header>
 
     <script>    
@@ -23,6 +24,11 @@
         .then((html) => {
           document.querySelector("#navbar").innerHTML = html;
         });
+      fetch("components/apresentaçao.html")
+      .then((resposta) => resposta.text())
+      .then((html) => {
+      document.querySelector("#apresentaçao").innerHTML = html;
+    });
     </script>
   </body>
 </html>
