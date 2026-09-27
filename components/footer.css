@@ -1,0 +1,16 @@
+.footer{
+    position: relative;
+
+    min-height: 400px;
+    height: 50vh;
+    
+    background-color: rgb(230, 20, 20);
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}

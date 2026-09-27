@@ -1,6 +1,71 @@
 @import url(/components/Navbar.css);
 @import url(/components/Apresentaçao.css);
+@import url(/components/footer.css);
+@import url(/components/produtos.css);
 
 body{
     margin: 0;
+    overflow-x: hidden;
+}
+.main{
+    position: relative;
+    
+    min-height: 100vh;
+    width: 100%;
+
+
+    padding-top: 100px;
+
+
+    background-image: url(assets/imagem_fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+
+}
+.main::before{
+    content: "";
+
+    position: absolute;
+
+    width: 120%;
+    height: 100px;
+
+    left: -10%;
+    top: 0;
+
+
+
+    border-top: 18px solid gold;
+
+    border-radius: 50% 50% 0 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+}
+.main::after {
+    content: "";
+
+    position: absolute;
+
+    width: 120%;
+    height: 100px;
+
+    left: -10%;
+    bottom: 0;
+
+    background: transparent;
+
+    border-bottom: 18px solid gold;
+
+    border-radius: 0 0 50% 50%;
+
+    z-index: 2;
+
+    pointer-events: none;
 }
