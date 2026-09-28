@@ -2,6 +2,9 @@
 @import url(/components/Apresentaçao.css);
 @import url(/components/footer.css);
 @import url(/components/produtos.css);
+@import url(/components/about.css);
+
+
 
 body{
     margin: 0;
