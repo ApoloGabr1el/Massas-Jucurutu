@@ -1,0 +1,20 @@
+.main--produtos {
+    position: relative;
+
+    min-height: 340px !important;
+
+    
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.main--produtos::before{
+    height: -20px !important;
+
+
+}

@@ -1,0 +1,44 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    height: 450px;
+    gap: 5px;
+}
+
+.hero__badge{
+    font-size: 64px;
+}
+.hero__title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    color: aliceblue;
+}
+.hero__title span {
+    font-size: 4.5rem;
+    font-weight: 400;
+    
+
+}
+
+.hero__title strong {
+    font-size: 5.5rem;
+    font-weight: 700;
+}
+.hero__text {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    color: aliceblue;
+    gap: 5px;
+
+}
+.hero__text p {
+    margin: 0;
+}
