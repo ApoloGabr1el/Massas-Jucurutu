@@ -1,0 +1,54 @@
+.about{
+    
+    align-items: center;
+    z-index: 1;
+    display: flex;
+
+    border-radius: 2%;
+
+    min-height: 50vh;
+    margin-top: 6rem;
+    gap: 4rem;
+
+    box-sizing: border-box;
+
+
+}
+
+.about-cards{
+    
+    z-index: 2;
+    
+    max-width: 70vh;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.8rem;
+    box-sizing: border-box;
+    margin:auto;
+
+}
+
+.about-title{
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    font-style: italic;
+    margin-top: 0;
+}
+
+
+.about-img{
+    height: 45%;
+    width:  45%;
+    border-radius: 5%;
+    margin: auto;
+}
+
+.about-text{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}

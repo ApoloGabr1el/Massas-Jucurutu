@@ -1,19 +1,136 @@
-.produtos{
+.produtos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+
+    gap: 4rem;
+}
+
+.produtos-title {
+    font-size: 3.5rem;
+    text-align: center;
+    color: white;
+    background-color: rgb(230, 20, 20);
+    border-radius: 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+    margin: 0 0rem 5rem 0;
+    padding: 1rem;
+    transform: scale(1);
+    transition:
+      0.2s ease-in-out, transform 0.2s ease;
+}
+
+.produtos-title:hover {
+  background-color: rgb(4, 4, 192);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.produtos-lista {
+    width: 90%;
+
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    gap: 40px;
 }
 
 .produtos_item{
+    background-color: #fffaf3;
+    background-image:
+        radial-gradient(
+            circle at 20% 20%,
+            transparent 0 30px,
+            rgba(180, 150, 100, 0.08) 31px 32px,
+            transparent 33px
+        );
+    
+    border-radius: 25px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
     display: flex;
-    height: 400px;
-    width: 400px;
-    box-sizing: border-box;
-    margin: auto;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
+
+.produtos_item::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("../assets/padrao.png");
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.08;
+
+    pointer-events: none;
+}
+
+.produto-item-title{
+    color: red;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: 0.67s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Fredoka", sans-serif;
+}
+.produto-item-title:hover{
+    font-size: 1.5rem;
+    color: gold;
+    
+
+}
+
+
+.produtos-btn {
+    color: rgb(231, 17, 17);
+
+    border-radius: 35px;
+
+    width: 100px;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+
+    text-align: center;
+
+    background-color: gold;
+
+    margin-bottom: 10px;
+    padding: 1rem;
+
+    transform: scale(1);
+    transition:
+      0.2s ease-in-out, transform 0.2s ease;
+}
+.produtos-btn:hover {
+  background-color: rgb(4, 4, 192);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+
+
 
 .item_img{
     height: 350px;
@@ -30,3 +147,4 @@
     width: 380px;
     transform: translateY(-3px);
 }
+
