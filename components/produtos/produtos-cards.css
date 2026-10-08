@@ -47,3 +47,20 @@
 
     line-height: 1.4;
 }
+
+.btn-saiba{
+    border-radius: 1rem;
+    background-color: red;
+    color: white;
+    height: 20px;
+
+    transition: 0.67s;
+
+    margin-bottom: 8px;
+}
+
+.btn-saiba:hover{
+    height: 32px;
+
+    cursor: pointer;
+}
