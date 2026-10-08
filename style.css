@@ -3,8 +3,9 @@
 @import url(/components/footer.css);
 @import url(/components/produtos.css);
 @import url(/components/about.css);
-@import url(/components/page-produtos.css);
+@import url(/components/produtos/page-produtos.css);
 @import url(/components/hero.css);
+@import url(/components/produtos/produtos-cards.css);
 
 
 /*  index.html */
