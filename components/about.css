@@ -1,54 +1,55 @@
-.about{
-    
-    align-items: center;
-    z-index: 1;
+.about {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    border-radius: 2%;
+    gap: 4rem;
+    padding: 4rem 2rem;
 
     min-height: 50vh;
     margin-top: 6rem;
-    gap: 4rem;
 
-    box-sizing: border-box;
-
-
+    z-index: 1;
 }
 
-.about-cards{
-    
-    z-index: 2;
-    
-    max-width: 70vh;
+.about-img {
+    width: min(420px, 90%);
+    height: auto;
 
-    padding: 30px;
+    border-radius: 5%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.about-cards {
+    max-width: 620px;
 
     display: flex;
     flex-direction: column;
-    margin-left: 1.8rem;
-    box-sizing: border-box;
-    margin:auto;
+    align-items: center;
+    gap: 1.5rem;
 
+    z-index: 2;
 }
 
-.about-title{
+.about-title {
     text-align: center;
-    font-size: 4rem;
-    color: white;
+    font-size: 3.5rem;
+    font-family: "Fredoka", sans-serif;
     font-style: italic;
-    margin-top: 0;
-}
-
-
-.about-img{
-    height: 45%;
-    width:  45%;
-    border-radius: 5%;
-    margin: auto;
-}
-
-.about-text{
     color: white;
-    font-size: 20px;
+
+    margin: 0;
+}
+
+.about-text {
+    color: white;
+    font-family: "Fredoka", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
     text-align: center;
+
+    background-color: rgba(240, 156, 54, 0.85);
+    padding: 2rem;
+    border-radius: 2rem;
 }
