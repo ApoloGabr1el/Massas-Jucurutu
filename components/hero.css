@@ -7,6 +7,11 @@
     gap: 5px;
 }
 
+.hero__logo {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
 .hero__badge{
     font-size: 64px;
 }
