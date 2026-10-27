@@ -1,0 +1,93 @@
+
+/* Página de ajuda */
+
+.ajuda {
+    font-family: Arial, sans-serif;
+    background-color: #fff8ed;
+    color: #51351f;
+    padding-bottom: 30px;
+}
+
+/* Cabeçalho */
+
+.ajuda__cabecalho {
+    background-color: #8b451f;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.ajuda__cabecalho h1 {
+    font-size: 32px;
+}
+
+.ajuda__cabecalho p {
+    font-size: 18px;
+}
+
+/* Perguntas */
+
+.ajuda__perguntas {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.ajuda__perguntas h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.ajuda__item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #e0c9a6;
+    border-radius: 8px;
+}
+
+.ajuda__item h3 {
+    margin-top: 0;
+}
+
+.ajuda__item p {
+    line-height: 1.5;
+}
+
+.ajuda__item a {
+    color: #8b451f;
+    font-weight: bold;
+}
+
+/* Contato */
+
+.ajuda__contato {
+    background-color: #f0dfc3;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.ajuda__contato a {
+    display: inline-block;
+    background-color: #8b451f;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.ajuda__contato a:hover {
+    background-color: #633014;
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+    .ajuda__cabecalho h1 {
+        font-size: 26px;
+    }
+
+    .ajuda__perguntas {
+        padding: 0 15px;
+    }
+}

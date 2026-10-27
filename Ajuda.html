@@ -1,24 +1,82 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massas Jucurutu</title>
+
+    <title>Ajuda - Massas Jucurutu</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="components/Ajuda.css">
 </head>
 <body>
+
     <header id="navbar"></header>
 
+    <main class="ajuda">
+
+        <section class="ajuda__cabecalho">
+            <h1>Central de Ajuda</h1>
+            <p>
+                Tire suas dúvidas sobre os produtos da
+                Massas Jucurutu.
+            </p>
+        </section>
+
+        <section class="ajuda__perguntas">
+            <h2>Perguntas Frequentes</h2>
+
+            <div class="ajuda__item">
+                <h3>Quais produtos a empresa oferece?</h3>
+                <p>
+                    Oferecemos diferentes tipos de biscoitos e massas.
+                    Acesse nossa página de produtos para conhecer as opções.
+                </p>
+                <a href="Produtos.html">Ver produtos</a>
+            </div>
+
+            <div class="ajuda__item">
+                <h3>Como conservar os biscoitos?</h3>
+                <p>
+                    Mantenha os produtos bem fechados e siga as
+                    instruções de conservação da embalagem.
+                </p>
+            </div>
+
+            <div class="ajuda__item">
+                <h3>Como conhecer a história da empresa?</h3>
+                <p>
+                    Acesse nossa página e conheça mais sobre a
+                    Massas Jucurutu.
+                </p>
+                <a href="QuemSomos.html">Quem somos</a>
+            </div>
+
+            <div class="ajuda__item">
+                <h3>Como entrar em contato?</h3>
+                <p>
+                    Consulte os canais oficiais da empresa como o whatsapp, o instagram e o facebook para
+                    obter informações de atendimento.
+                </p>
+            </div>
+        </section>
+
+        <section class="ajuda__contato">
+            <h2>Precisa de mais informações?</h2>
+            <p>Conheça nossos produtos e saiba mais sobre a empresa.</p>
+            <a href="Produtos.html">Conhecer produtos</a>
+        </section>
+
+    </main>
+
     <script>
-        fetch("components/navbar.html").then((resposta) => resposta.text()).then((html) => {
-            document.querySelector("#navbar").innerHTML = html;
-        });
+        fetch("components/navbar.html")
+            .then(resposta => resposta.text())
+            .then(html => {
+                document.getElementById("navbar").innerHTML = html;
+            });
     </script>
+
 </body>
 </html>

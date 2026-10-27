@@ -1,26 +1,108 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Massas Jucurutu</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
-      rel="stylesheet"/>
 
+    <title>Quem Somos - Massas Jucurutu</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components/QuemSomos.css">
 </head>
 <body>
-    <header>
-        <div id="navbar"></div>
-    </header>
+
+    <header id="navbar"></header>
+
+    <main class="quem-somos">
+
+        <section class="quem-somos__banner">
+            <h1>Mais que massas, sabor e tradição!</h1>
+            <p>
+                Conheça a Massas Jucurutu e o nosso compromisso
+                com a qualidade.
+            </p>
+        </section>
+
+        <section class="quem-somos__historia">
+
+            <div class="quem-somos__texto">
+                <h2>Quem Somos</h2>
+
+                <p>
+                    A Massas Jucurutu faz parte do ramo alimentício,
+                    oferecendo produtos para tornar os momentos
+                    das famílias ainda mais saborosos.
+                </p>
+
+                <p>
+                    Nosso objetivo é valorizar a qualidade dos produtos
+                    e construir uma boa relação com nossos clientes.
+                </p>
+            </div>
+
+            <div class="quem-somos__destaque">
+                <h3>Nosso compromisso</h3>
+                <p>
+                    Oferecer produtos com qualidade e buscar sempre
+                    a satisfação dos nossos clientes.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="quem-somos__valores">
+
+            <h2>O que nos oferecemos?</h2>
+
+            <div class="quem-somos__cards">
+
+                <div class="quem-somos__card">
+                    <h3>Qualidade</h3>
+                    <p>
+                        Buscamos oferecer produtos que atendam
+                        às expectativas dos nossos clientes.
+                    </p>
+                </div>
+
+                <div class="quem-somos__card">
+                    <h3>Compromisso</h3>
+                    <p>
+                        Trabalhamos para oferecer um bom atendimento
+                        e valorizar nossos consumidores.
+                    </p>
+                </div>
+
+                <div class="quem-somos__card">
+                    <h3>Tradição</h3>
+                    <p>
+                        Valorizamos a identidade da marca e sua
+                        relação com os consumidores.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="quem-somos__final">
+            <h2>Conheça nossos produtos!</h2>
+
+            <p>
+                Descubra as opções da Massas Jucurutu.
+            </p>
+
+            <a href="Produtos.html">Ver produtos</a>
+        </section>
+
+    </main>
 
     <script>
-        fetch("components/navbar.html").then((resposta) => resposta.text()).then((html) => {
-            document.querySelector("#navbar").innerHTML = html
-        });
+        fetch("components/navbar.html")
+            .then(resposta => resposta.text())
+            .then(html => {
+                document.getElementById("navbar").innerHTML = html;
+            });
     </script>
+
 </body>
 </html>

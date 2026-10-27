@@ -1,0 +1,125 @@
+
+/* Página Quem Somos */
+
+.quem-somos {
+    font-family: Arial, sans-serif;
+    color: #51351f;
+    background-color: #fff8ed;
+}
+
+/* Banner */
+
+.quem-somos__banner {
+    background-color: #8b451f;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.quem-somos__banner h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.quem-somos__banner p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* História */
+
+.quem-somos__historia {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.quem-somos__texto {
+    flex: 2;
+    line-height: 1.7;
+}
+
+.quem-somos__destaque {
+    flex: 1;
+    background-color: #f0dfc3;
+    padding: 25px;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.quem-somos__destaque h3 {
+    color: #8b451f;
+}
+
+/* Valores */
+
+.quem-somos__valores {
+    text-align: center;
+    padding: 35px 20px 50px;
+    background-color: #f5ead8;
+}
+
+.quem-somos__valores h2 {
+    margin-bottom: 30px;
+}
+
+.quem-somos__cards {
+    display: flex;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.quem-somos__card {
+    flex: 1;
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 8px;
+    border: 1px solid #e0c9a6;
+    line-height: 1.6;
+}
+
+.quem-somos__card h3 {
+    color: #8b451f;
+}
+
+/* Final */
+
+.quem-somos__final {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.quem-somos__final a {
+    display: inline-block;
+    background-color: #8b451f;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.quem-somos__final a:hover {
+    background-color: #633014;
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+    .quem-somos__banner h1 {
+        font-size: 26px;
+    }
+
+    .quem-somos__historia {
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .quem-somos__cards {
+        flex-direction: column;
+    }
+}
