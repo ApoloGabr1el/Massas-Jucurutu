@@ -41,7 +41,7 @@ O Flexbox foi utilizado em diversos pontos do projeto:
 - `Produtos.html` - Página de catálogo de produtos
 - `QuemSomos.html` - Página sobre a empresa
 - `componentes.html` - Biblioteca de componentes
-- `style.css` / `css/style.css` - Arquivo CSS principal
+- `css/style.css` - Arquivo CSS principal (importa os componentes)
 - `components/` - Componentes CSS modulares (BEM)
 - `assets/` - Imagens e logotipos
 - `docs/diario-de-bordo.md` - Diário de bordo com registro do processo e uso de IA
@@ -54,9 +54,18 @@ O registro completo do desenvolvimento e decisões do grupo está em: [docs/diar
 O projeto foi desenvolvido de forma autoral pelo grupo. A IA foi utilizada apenas para consultas pontuais quando necessário, com todas as decisões e adaptações feitas pelos integrantes. O uso foi registrado no diário de bordo.
 
 ## Instruções para Abrir o Projeto
+
 1. Clone o repositório
-2. Abra o arquivo `index.html` no navegador web
-3. Navegue entre as páginas através do menu de navegação
+2. Inicie um servidor local na pasta do projeto:
+
+   ```bash
+   python -m http.server 8000
+   ```
+
+3. Abra `http://localhost:8000` no navegador
+4. Navegue entre as páginas através do menu de navegação
+
+> **Importante:** não abra o `index.html` diretamente pelo navegador (`file://`). A navbar e o rodapé são carregados via `fetch`, e o navegador bloqueia essas requisições quando o arquivo é aberto localmente — a página aparece sem menu e sem rodapé. Por isso é necessário usar o servidor local.
 
 ## Padrão Utilizado
 - **Metodologia:** BEM (Block, Element, Modifier)
