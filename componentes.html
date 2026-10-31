@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca de Componentes - Massas Jucurutu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="navbar"></div>
+    </header>
+
+    <main>
+      <h1>Biblioteca de Componentes</h1>
+      <h2>Componentes Simples</h2>
+      <div>
+        <a class="produtos-btn" href="#">Botão</a>
+        <button class="btn-saiba">Saiba mais →</button>
+        <span class="hero__badge">🌾</span>
+        <a class="nav__link" href="#">Link</a>
+        <span class="footer-text">Texto</span>
+      </div>
+
+      <h2>Componentes Compostos</h2>
+      <div class="produtos_item">
+        <img class="item_img" src="assets/maisena.png" alt="Maisena" />
+        <h4 class="produto-item-title">Maisena</h4>
+        <a class="produtos-btn" href="#">Saiba mais</a>
+      </div>
+
+      <div class="hero">
+        <img class="hero__logo" src="assets/Massas-Jucurutu-logo.png" alt="Logo" />
+        <h1 class="hero__title">
+          <span>O sabor que vem do</span>
+          <strong>Sertão</strong>
+        </h1>
+      </div>
+
+      <section class="about">
+        <img class="about-img" src="assets/fabrica.png" alt="Fábrica" />
+        <div class="about-cards">
+          <h2 class="about-title">Quem somos</h2>
+          <p class="about-text">A Massas Jucurutu nasceu em 1999...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer">
+        <span class="copyright">Copyright® Massas Jucurutu</span>
+      </section>
+    </footer>
+
+    <script>
+      fetch("components/navbar.html")
+        .then(function(resposta) { return resposta.text(); })
+        .then(function(html) { document.querySelector("#navbar").innerHTML = html; });
+    </script>
+  </body>
+</html>
