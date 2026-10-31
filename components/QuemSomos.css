@@ -2,28 +2,33 @@
 /* Página Quem Somos */
 
 .quem-somos {
-    font-family: Arial, sans-serif;
-    color: #51351f;
-    background-color: #fff8ed;
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+    background-color: var(--cor-creme);
 }
 
 /* Banner */
 
 .quem-somos__banner {
-    background-color: #8b451f;
+    background-color: var(--cor-principal);
     color: white;
     text-align: center;
     padding: 60px 20px;
+    box-shadow: inset 0 -6px 0 var(--cor-dourada);
 }
 
 .quem-somos__banner h1 {
-    font-size: 32px;
+    font-family: var(--fonte-titulo);
+    font-size: 2.4rem;
+    font-weight: 600;
     margin-bottom: 15px;
 }
 
 .quem-somos__banner p {
-    font-size: 18px;
+    font-size: 1.15rem;
     line-height: 1.5;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 /* História */
@@ -42,16 +47,26 @@
     line-height: 1.7;
 }
 
+.quem-somos__texto h2 {
+    color: var(--cor-principal-escura);
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+}
+
 .quem-somos__destaque {
     flex: 1;
-    background-color: #f0dfc3;
+    background-color: var(--cor-creme-escura);
     padding: 25px;
-    border-radius: 8px;
+    border-left: 6px solid var(--cor-dourada);
+    border-radius: 14px;
     line-height: 1.6;
+    box-shadow: var(--sombra-card);
 }
 
 .quem-somos__destaque h3 {
-    color: #8b451f;
+    color: var(--cor-principal-escura);
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
 }
 
 /* Valores */
@@ -59,11 +74,14 @@
 .quem-somos__valores {
     text-align: center;
     padding: 35px 20px 50px;
-    background-color: #f5ead8;
+    background-color: var(--cor-creme-escura);
 }
 
 .quem-somos__valores h2 {
     margin-bottom: 30px;
+    color: var(--cor-principal-escura);
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
 }
 
 .quem-somos__cards {
@@ -77,13 +95,16 @@
     flex: 1;
     background-color: white;
     padding: 25px 20px;
-    border-radius: 8px;
-    border: 1px solid #e0c9a6;
+    border-radius: 16px;
+    border: 1px solid rgba(231, 168, 45, 0.45);
+    box-shadow: var(--sombra-card);
     line-height: 1.6;
 }
 
 .quem-somos__card h3 {
-    color: #8b451f;
+    color: var(--cor-principal-escura);
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
 }
 
 /* Final */
@@ -93,25 +114,58 @@
     padding: 40px 20px;
 }
 
+.quem-somos__final h2 {
+    color: var(--cor-principal-escura);
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+}
+
 .quem-somos__final a {
     display: inline-block;
-    background-color: #8b451f;
+    background-color: var(--cor-principal);
     color: white;
-    padding: 12px 25px;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 12px 28px;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 999px;
     text-decoration: none;
+    box-shadow: 0 6px 14px rgba(230, 20, 20, 0.25);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .quem-somos__final a:hover {
-    background-color: #633014;
+    background-color: var(--cor-dourada);
+    color: var(--cor-principal-escura);
+    transform: translateY(-2px);
 }
 
 /* Celulares */
 
+@media (max-width: 768px) {
+    .quem-somos__banner {
+        padding: 44px 18px;
+    }
+
+    .quem-somos__banner h1 {
+        font-size: 2rem;
+    }
+
+    .quem-somos__banner p {
+        font-size: 1rem;
+    }
+
+    .quem-somos__historia {
+        margin: 28px auto;
+        padding: 0 18px;
+    }
+}
+
 @media (max-width: 600px) {
     .quem-somos__banner h1 {
-        font-size: 26px;
+        font-size: 1.9rem;
     }
 
     .quem-somos__historia {
@@ -121,5 +175,12 @@
 
     .quem-somos__cards {
         flex-direction: column;
+    }
+
+    .quem-somos__final a {
+        display: block;
+        max-width: 320px;
+        margin: 16px auto 0;
+        padding: 14px 20px;
     }
 }

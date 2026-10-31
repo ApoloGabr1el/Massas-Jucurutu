@@ -18,11 +18,12 @@
 .produtos-section-title h3 {
     margin: 0;
 
-    color: rgb(190, 20, 35);
+    color: var(--cor-principal-escura);
 
-    font-family: Georgia, serif;
-    font-size: 2rem;
-    font-weight: bold;
+    font-family: var(--fonte-titulo);
+    font-size: 2.1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
 .produtos-icon {
@@ -32,18 +33,55 @@
 .produtos-section-line {
     flex: 1;
     height: 2px;
-    background-color: #e7a82d;
+    background-color: var(--cor-dourada);
 }
 .produtos-section-description {
-    width: 220px;
+    width: 240px;
 
     margin: 0;
 
-    color: #8b1717;
+    color: var(--cor-texto-suave);
 
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
+    font-family: var(--fonte-texto);
+    font-size: 1.05rem;
+    font-weight: 400;
     font-style: italic;
 
     line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+    .produtos-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .produtos-section-line {
+        width: 100%;
+        flex: none;
+    }
+
+    .produtos-section-description {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .produtos-section-title {
+        gap: 10px;
+        white-space: normal;
+    }
+
+    .produtos-section-title h3 {
+        font-size: 1.55rem;
+    }
+
+    .produtos-icon {
+        font-size: 1.8rem;
+    }
+
+    .produtos-section-description {
+        font-size: 0.95rem;
+    }
 }

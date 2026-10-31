@@ -120,28 +120,11 @@
         </div>
     </section>
 
-    <footer>
-      <section class="footer">
-        <div class="texts">
-          <span class="footer-text">Políticas de Privacidade</span>
-          <span class="footer-text">Termos de Uso</span>
-          <span class="footer-text">Investidores</span>
-          <span class="footer-text">Seja nosso cliente</span>
-          <span class="footer-text">Fale conosco</span>
-        </div>
-        <div class="footer-section-icons">
-          <!-- SVGs aqui -->
-        </div>
-        <span class="copyright">Copyright® Massas Jucurutu</span>
-      </section>
+    <footer> 
+      <div id="footer"></div> 
     </footer>
 
-    <script>    
-      fetch("components/navbar.html")
-        .then((resposta) => resposta.text())
-        .then((html) => {
-          document.querySelector("#navbar").innerHTML = html;
-        });
-    </script>
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
   </body>
 </html>

@@ -14,21 +14,23 @@
     font-size: 3rem;
     text-align: center;
     color: white;
-    background-color: rgb(230, 20, 20);
+    background-color: var(--cor-principal);
     border-radius: 35px;
     text-transform: uppercase;
     text-decoration: none;
-    font-family: "Fredoka", sans-serif;
+    font-family: var(--fonte-titulo);
     font-weight: 600;
+    letter-spacing: 0.03em;
     margin: 0;
     padding: 0.8rem 2.5rem;
+    box-shadow: 0 8px 18px rgba(230, 20, 20, 0.25);
 }
 
 .produtos-lista {
     width: min(1200px, 90%);
 
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     justify-content: center;
     gap: 40px;
 }
@@ -36,29 +38,27 @@
 .produtos_item {
     position: relative;
 
-    width: 320px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 340px;
+    justify-self: center;
 
-    background-color: #fffaf3;
-    background-image:
-        radial-gradient(
-            circle at 20% 20%,
-            transparent 0 30px,
-            rgba(180, 150, 100, 0.08) 31px 32px,
-            transparent 33px
-        );
+    background-color: var(--cor-creme);
 
-    border-radius: 25px;
+    border: 1px solid rgba(231, 168, 45, 0.35);
+    border-radius: 28px;
 
-    box-shadow:
-        0 4px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--sombra-card);
 
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    padding: 1.5rem;
+    padding: 1.75rem 1.5rem 1.5rem;
     gap: 1rem;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .produtos_item::before {
@@ -68,28 +68,45 @@
 
     inset: 0;
 
-    background-image: url("../assets/padrao.png");
-    background-size: cover;
-    background-position: center;
-
-    opacity: 0.08;
+    background-image:
+        radial-gradient(
+            circle at 12% 12%,
+            rgba(231, 168, 45, 0.16) 0 14%,
+            transparent 15%
+        ),
+        radial-gradient(
+            circle at 88% 90%,
+            rgba(230, 20, 20, 0.08) 0 16%,
+            transparent 17%
+        );
+    background-size: 130px 130px;
 
     pointer-events: none;
 }
 
+.produtos_item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(74, 44, 26, 0.2);
+}
+
+.produtos_item h4,
 .produto-item-title {
-    color: red;
+    color: var(--cor-principal-escura);
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
     text-decoration: none;
-    font-family: "Fredoka", sans-serif;
+    font-family: var(--fonte-titulo);
 
     margin: 0;
+
+    z-index: 1;
 }
 
 .item_img {
-    width: 220px;
+    width: min(220px, 100%);
     height: 220px;
     object-fit: contain;
 
@@ -104,28 +121,116 @@
     transform: translateY(-3px) scale(1.05);
 }
 
-.produtos-btn {
-    color: rgb(231, 17, 17);
+.produtos-btn,
+.btn-saiba {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    color: white;
     text-transform: uppercase;
     text-decoration: none;
-    font-family: "Fredoka", sans-serif;
+    font-family: var(--fonte-titulo);
+    font-size: 1rem;
     font-weight: 600;
+    letter-spacing: 0.04em;
     text-align: center;
 
-    background-color: gold;
+    background-color: var(--cor-principal);
 
-    border-radius: 35px;
+    border: 2px solid var(--cor-principal);
+    border-radius: 999px;
 
     padding: 0.8rem 1.8rem;
 
+    box-shadow: 0 6px 14px rgba(230, 20, 20, 0.25);
+
     transition:
-      0.2s ease-in-out, transform 0.2s ease;
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    cursor: pointer;
 
     z-index: 1;
 }
-.produtos-btn:hover {
-  background-color: rgb(4, 4, 192);
-  color: white;
-  cursor: pointer;
-  transform: scale(1.05);
+
+.btn-saiba {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+}
+
+.produtos-btn:hover,
+.btn-saiba:hover {
+    background-color: var(--cor-dourada);
+    border-color: var(--cor-dourada);
+    color: var(--cor-principal-escura);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(231, 168, 45, 0.4);
+}
+
+.produtos-btn:active,
+.btn-saiba:active {
+    transform: translateY(0) scale(0.99);
+}
+
+.produtos-btn:focus-visible,
+.btn-saiba:focus-visible {
+    outline: 3px solid var(--cor-dourada);
+    outline-offset: 3px;
+}
+
+@media (max-width: 1024px) {
+    .produtos-lista {
+        grid-template-columns: repeat(2, minmax(0, 340px));
+    }
+}
+
+@media (max-width: 768px) {
+    .produtos {
+        padding: 3rem 0;
+        gap: 2.5rem;
+    }
+
+    .produtos-title {
+        font-size: 2rem;
+        padding: 0.7rem 1.8rem;
+    }
+
+    .produtos_item {
+        padding: 1.25rem 1rem 1rem;
+    }
+
+    .item_img {
+        height: 190px;
+    }
+}
+
+@media (max-width: 640px) {
+    .produtos-lista {
+        grid-template-columns: minmax(0, 340px);
+        gap: 28px;
+    }
+
+    .produtos_item {
+        max-width: 100%;
+    }
+
+    .produtos-title {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .produtos-title {
+        font-size: 1.5rem;
+        padding: 0.6rem 1.4rem;
+    }
+
+    .item_img {
+        height: 170px;
+    }
 }

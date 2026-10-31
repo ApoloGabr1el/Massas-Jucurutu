@@ -2,27 +2,33 @@
 /* Página de ajuda */
 
 .ajuda {
-    font-family: Arial, sans-serif;
-    background-color: #fff8ed;
-    color: #51351f;
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-creme);
+    color: var(--cor-texto);
     padding-bottom: 30px;
 }
 
 /* Cabeçalho */
 
 .ajuda__cabecalho {
-    background-color: #8b451f;
-    color: white;
+    background-color: var(--cor-principal);
+    color: var(--cor-creme);
     text-align: center;
     padding: 40px 20px;
+    box-shadow: inset 0 -6px 0 var(--cor-dourada);
 }
 
 .ajuda__cabecalho h1 {
-    font-size: 32px;
+    font-family: var(--fonte-titulo);
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-top: 0;
 }
 
 .ajuda__cabecalho p {
-    font-size: 18px;
+    font-size: 1.15rem;
+    max-width: 640px;
+    margin: 0 auto;
 }
 
 /* Perguntas */
@@ -36,18 +42,26 @@
 .ajuda__perguntas h2 {
     text-align: center;
     margin-bottom: 25px;
+    color: var(--cor-principal-escura);
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
 }
 
 .ajuda__item {
-    background-color: white;
+    background-color: var(--cor-creme);
     padding: 20px;
     margin-bottom: 15px;
-    border: 1px solid #e0c9a6;
-    border-radius: 8px;
+    border: 1px solid var(--cor-dourada);
+    border-left: 6px solid var(--cor-dourada);
+    border-radius: 14px;
+    box-shadow: var(--sombra-card);
 }
 
 .ajuda__item h3 {
     margin-top: 0;
+    color: var(--cor-principal-escura);
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
 }
 
 .ajuda__item p {
@@ -55,39 +69,85 @@
 }
 
 .ajuda__item a {
-    color: #8b451f;
-    font-weight: bold;
+    color: var(--cor-principal-escura);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--cor-dourada);
+    transition: color 0.2s ease;
+}
+
+.ajuda__item a:hover {
+    color: var(--cor-principal);
 }
 
 /* Contato */
 
 .ajuda__contato {
-    background-color: #f0dfc3;
+    background-color: var(--cor-creme-escura);
     text-align: center;
     padding: 30px 20px;
 }
 
+.ajuda__contato h2 {
+    color: var(--cor-principal-escura);
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+}
+
 .ajuda__contato a {
     display: inline-block;
-    background-color: #8b451f;
-    color: white;
-    padding: 12px 20px;
+    background-color: var(--cor-principal);
+    color: var(--cor-creme);
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 12px 26px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 999px;
+    box-shadow: 0 6px 14px rgba(230, 20, 20, 0.25);
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
 .ajuda__contato a:hover {
-    background-color: #633014;
+    background-color: var(--cor-dourada);
+    color: var(--cor-principal-escura);
+    transform: translateY(-2px);
 }
 
 /* Celulares */
 
+@media (max-width: 768px) {
+    .ajuda__cabecalho {
+        padding: 32px 18px;
+    }
+
+    .ajuda__cabecalho h1 {
+        font-size: 2rem;
+    }
+
+    .ajuda__cabecalho p {
+        font-size: 1rem;
+    }
+
+    .ajuda__item {
+        padding: 16px;
+    }
+}
+
 @media (max-width: 600px) {
     .ajuda__cabecalho h1 {
-        font-size: 26px;
+        font-size: 1.9rem;
     }
 
     .ajuda__perguntas {
         padding: 0 15px;
+    }
+
+    .ajuda__contato a {
+        display: block;
+        max-width: 320px;
+        margin: 0 auto;
+        padding: 14px 20px;
     }
 }

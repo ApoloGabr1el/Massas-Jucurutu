@@ -9,6 +9,10 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="components/QuemSomos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -96,13 +100,12 @@
 
     </main>
 
-    <script>
-        fetch("components/navbar.html")
-            .then(resposta => resposta.text())
-            .then(html => {
-                document.getElementById("navbar").innerHTML = html;
-            });
-    </script>
+    <footer> 
+      <div id="footer"></div> 
+    </footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
 
 </body>
 </html>
