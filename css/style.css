@@ -8,11 +8,28 @@
 @import url(/components/produtos/produtos-cards.css);
 
 
-/*  index.html */
+/*  Paleta padrão do site  */
+
+:root {
+    --cor-principal: #e61414;
+    --cor-principal-escura: #b30f0f;
+    --cor-dourada: #e7a82d;
+    --cor-creme: #fffaf3;
+    --cor-creme-escura: #f7e8d2;
+    --cor-texto: #4a2c1a;
+    --cor-texto-suave: #7a5a3f;
+    --fonte-titulo: "Fredoka", sans-serif;
+    --fonte-texto: "Fredoka", sans-serif;
+    --sombra-card: 0 8px 22px rgba(74, 44, 26, 0.12);
+}
+
 
 body{
     margin: 0;
     overflow-x: hidden;
+    background-color: var(--cor-creme);
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
 }
 .main{
     position: relative;
@@ -52,7 +69,7 @@ body{
     left: 0;
     top: 0;
 
-    border-top: 18px solid gold;
+    border-top: 18px solid var(--cor-dourada);
 
     border-radius: 50% 50% 0 0;
 
@@ -73,11 +90,35 @@ body{
 
     background: transparent;
 
-    border-bottom: 18px solid gold;
+    border-bottom: 18px solid var(--cor-dourada);
 
     border-radius: 0 0 50% 50%;
 
     z-index: 2;
 
     pointer-events: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main {
+        min-height: auto;
+        padding-top: 4rem;
+    }
+
+    .main::before,
+    .main::after {
+        height: 60px;
+    }
+
+    .main::before {
+        border-top-width: 12px;
+    }
+
+    .main::after {
+        border-bottom-width: 12px;
+    }
 }
