@@ -1,5 +1,6 @@
 # Massas-Jucurutu
 
+
 ## Informações do Projeto
 - **Nome do projeto:** Massas Jucurutu
 - **Tema escolhido:** Página institucional/catálogo da indústria de biscoitos e massas alimentícias Massas Jucurutu
@@ -72,4 +73,4 @@ O projeto foi desenvolvido de forma autoral pelo grupo. A IA foi utilizada apena
 - **Layout:** Flexbox
 - **Tecnologias:** HTML5, CSS3 (sem frameworks)
 
-
+## Como está ficando (https://ApoloGabr1el.github.io/Massas-Jucurutu/)
